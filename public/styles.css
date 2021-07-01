@@ -1,0 +1,361 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Inline&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@600&display=swap');
+
+/* how to make this work instead of Google API import
+@font-face {
+    font-family: "Bungee Inline - Regular";
+    src: url("Fonts/BungeeInline-Regular.ttf") format("ttf");
+    font-weight: normal;
+    font-style: normal;
+} */
+
+* {
+    box-sizing: border-box;
+    font-family: 'Ubuntu Condensed', sans-serif;
+    color: #777;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+.nav ul {
+    margin: 0;
+}
+
+.nav li {
+    display: inline;
+}
+
+.nav a {
+    display: inline-block;
+    padding: .5em;
+    color: white;
+    text-decoration: none;
+}
+
+.main-nav {
+    text-align: center;
+    font-size: 1.4em;
+    font-weight: lighter;
+    border-bottom: 1px solid rgba(255, 255, 255, .3);
+}
+
+.main-nav li {
+    padding: 0 5%;
+}
+
+.nav a:hover {
+    background-color: rgba(255, 255, 255, .3)
+}
+
+.main-header {
+    background-color: rgba(0, 0, 0, .6);
+    background-image: url(/Images/ANONJ_Logo.jpg); /*how to make background scale?*/
+    background-blend-mode: multiply;
+    background-size: cover;
+    padding-bottom: 30px;
+}
+
+.band-name {
+    text-align: center;
+    margin: 0;
+    font-size: 2.5em;
+    /* font-family: "Bungee Inline - Regular"; //how to make it work with font file, instead of Google API*/
+    font-family: 'Bungee Inline', cursive;
+    font-weight: normal;
+    color: white;
+}
+
+.band-name-large {
+    font-size: 8em;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 1.5em;
+}
+
+.content-section {
+    margin: 1em;
+    font-size: 1.3em;
+    margin: 0 auto 2em auto; /*is this what I should do in order to add a space between the last section and the footer? do I use em or px? */
+}
+
+.section-header {
+    font-family: 'Teko', sans-serif;
+    font-weight: normal;
+    color: #333;
+    text-align: center;
+    font-size: 2.5em;
+}
+
+/* how to make image stay in container if text disappears? overflow: hidden;*/
+.about-band-image {
+    float: left;
+    height: 280px;
+    width: 350px;
+    margin: 15px;
+    border-radius: 5%;
+}
+
+.main-footer {
+    background-color: rgb(130, 10, 15);
+    font-family: 'Teko', sans-serif;
+    color: white;
+    padding: .25em 0;
+}
+
+.main-footer-container {
+    display: flex;
+    align-items: center;
+}
+
+.main-footer-container ul {
+    flex-grow: 1;
+    text-align: end;
+}
+
+.footer-nav li {
+    padding: 0 .5em;
+}
+
+.footer-nav img {
+    width: 40px;
+    height: 40px;
+}
+
+.btn {
+    text-align: center;
+    vertical-align: center;
+    padding: .67em;
+    cursor: pointer;
+}
+
+.btn-header {
+    margin: .5em 15% 2em 15%;
+    color: white;
+    border: 2px solid rgb(130, 10, 15);
+    background-color:rgba(255, 255, 255, .3);
+    border-radius: 0;
+    font-size: 1.5em;
+    font-weight: lighter;
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+.btn-header:hover {
+    background-color: rgba(255, 255, 255, .5);
+}
+
+.btn-play {
+    display: block;
+    margin: 0 auto;
+    /* Color not added, looks better as white */
+    /* color: rgb(130, 10, 15); */
+    font-size: 4em;
+    border-radius: 50%;
+    padding: 0;
+    width: 100px;
+    height: 100px;
+}
+
+.tour-row {
+    border-bottom: 1px solid rgba(0, 0, 0, .6);
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+}
+
+.tour-row:last-child {
+    border-bottom: none;
+}
+
+.tour-item {
+    display: inline-block;
+    padding-right: .5em;
+}
+
+.tour-date {
+    color: #555;
+    font-weight: bold;
+    width: 11%;
+}
+
+.tour-city {
+    width: 24%;
+}
+
+.tour-arena {
+    width: 42%;
+}
+
+.tour-btn {
+    max-width: 19%; /* how to make but then all the way at the end of the line, so that border is not extending? float: right; */
+}
+
+.btn-primary {
+    color: white;
+    background-color: rgb(130, 10, 15);
+    border: none;
+    border-radius: .3em;
+    /* font-weight: bold;  strange for our specific font */
+}
+
+.btn-primary:hover {
+    background-color: rgb(100, 10, 25);
+}
+
+.shop-item {
+    margin: 30px;
+    margin-top: 0; /* How to make it even closer to title? line-height: 10px; wonky need bigger */
+}
+
+.shop-item-title {
+    display: block;
+    margin-bottom: 15px;
+    width: 100%;
+    text-align: center;
+    color: #333;
+    font-size: 1.1em;
+    font-style: bold;
+}
+
+.shop-item-image {
+    height: 250px;
+}
+
+.shop-item-sticker {
+    height: 100px;
+    width: 250px;
+}
+
+.shop-item-details {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+
+.shop-item-price {
+    flex-grow: 1;
+    color: #333;
+}
+
+.shop-item-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.shop-item-section {
+    background-color: rgba(130, 10, 15, .2);
+    /* border: 1px, solid, rgb(100, 10, 25);  how to add border around container? */
+    padding-bottom: 1px; /* how to make space below purchase button and above title without making no space between the first section in the header? */
+}
+
+.cart-header {
+    font-weight: bold;
+    color: #333;
+    font-size: 1.2em;
+}
+
+.cart-column {
+    display: flex;
+    align-items: center;
+    border-bottom: 3px solid black;
+    margin-right: 1.5em;
+    padding-bottom: 10px;
+    margin-top: 10px;
+}
+
+.cart-row-header {
+    display: flex;
+}
+
+.cart-row {
+    display: flex;
+}
+
+.cart-item {
+    width: 45%;
+}
+
+.cart-price {
+    width: 20%;
+    color: #333;
+    font-size: 1.1em;
+}
+
+.cart-quantity {
+    width: 35%;
+}
+
+.cart-item-title {
+    color: #333;
+    margin-left: .5em;
+    font-size: 1.1em;
+}
+
+.cart-item-image {
+    width: 75px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.btn-remove {
+    color: white;
+    /* font-weight: bold;  looks blurry for this font */
+    background-color: rgb(15, 15, 160);
+    border: none;
+    border-radius: 10px; 
+}
+
+.btn-remove:hover {
+    background-color: rgb(19, 19, 90);
+}
+
+.cart-quantity-input {
+    height: 34px;
+    width: 80px;
+    border-radius: 5px;
+    /*border: 1px solid rgb(100, 10, 25); for this color scheme, having a border makes the input jarring to look at */
+    color: #333;
+    padding: 0;
+    text-align: center;
+    font-size: 1.1em;
+    margin-right: 25px;
+}
+
+.cart-row:last-child {
+    border-bottom: 3px solid black;
+}
+
+.cart-row:last-child .cart-column {
+    border: none;
+}
+
+.cart-total {
+    text-align: end;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.cart-total-item {
+    font-weight: bold;
+    font-size: 1.4em;
+    color: black;
+    margin-right: 20px;
+}
+
+.cart-total-price {
+    color: #333;
+    font-size: 1.1em; 
+}
+
+.btn-purchase {
+    display: block;
+    margin: 40px auto 40px auto;
+    font-size: 1.6em;
+}
