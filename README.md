@@ -1,4 +1,3 @@
 # Band Website
 
-Band website with payment function.
-Test
+Band website with payment function
