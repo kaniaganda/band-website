@@ -1,0 +1,24 @@
+{
+  "name": "band-website-2",
+  "version": "1.0.0",
+  "description": "Band website with payment function.\r Test",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kaniaganda/band-website-2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kaniaganda/band-website-2/issues"
+  },
+  "homepage": "https://github.com/kaniaganda/band-website-2#readme",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "stripe": "^8.160.0"
+  }
+}
