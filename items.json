@@ -1,0 +1,24 @@
+{
+    "music": [
+        {
+            "id": 1,
+            "name": "One Last Memory",
+            "price": 100,
+            "imgName": "ANONJ_Album.png"
+        },
+        {
+            "id": 2,
+            "name": "Something to Live For",
+            "price": 100,
+            "imgName": "ANONJ_Album.png"
+        }
+    ],
+    "merch": [
+        {
+            "id": 3,
+            "name": "Figure",
+            "price": 50,
+            "imgName": "ANONJ_Logo.png"
+        }
+    ]
+}
