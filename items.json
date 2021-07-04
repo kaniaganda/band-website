@@ -16,9 +16,9 @@
     "merch": [
         {
             "id": 3,
-            "name": "Figure",
+            "name": "Sticker",
             "price": 50,
-            "imgName": "ANONJ_Logo.png"
+            "imgName": "ANONJ_Logo.jpg"
         }
     ]
 }

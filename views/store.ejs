@@ -21,36 +21,32 @@
         <section class="content-section shop-item-section container">
             <h2 class="section-header">MUSIC</h2>
             <div class="shop-item-container">
-                <div class="shop-item">
-                    <span class="shop-item-title">One Last Memory</span>
-                    <img class="shop-item-image" src="Images/ANONJ_Album.png">
-                    <div class="shop-item-details">
-                        <span class="shop-item-price">$1.00</span>
-                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                <% items.music.forEach(function(item) { %>
+                    <div class="shop-item" data-item-id="<%= item.id %>">
+                        <span class="shop-item-title"><%= item.name %> </span>
+                        <img class="shop-item-image" src="Images/<%= item.imgName %>">
+                        <div class="shop-item-details">
+                            <span class="shop-item-price">$<%= item.price / 100 %></span>
+                            <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                        </div>
                     </div>
-                </div>
-                <div class="shop-item">
-                    <span class="shop-item-title">Something To Live For</span>
-                    <img class="shop-item-image" src="Images/ANONJ_Album.png">
-                    <div class="shop-item-details">
-                        <span class="shop-item-price">$1.00</span>
-                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
-                    </div>
-                </div>
+                <% }) %>
             </div>
         </section>
 
         <section class="content-section shop-item-section container">
             <h2 class="section-header">MERCH</h2>
             <div class="shop-item-container">
-                <div class="shop-item">
-                    <span class="shop-item-title">Sticker</span>
-                    <img class="shop-item-image shop-item-sticker" src="Images/ANONJ_Logo.jpg">
-                    <div class="shop-item-details">
-                        <span class="shop-item-price">$0.50</span>
-                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                <% items.merch.forEach(function(item) { %>
+                    <div class="shop-item" data-item-id="<%= item.id %>">
+                        <span class="shop-item-title"><%= item.name %> </span>
+                        <img class="shop-item-sticker" src="Images/<%= item.imgName %>">
+                        <div class="shop-item-details">
+                            <span class="shop-item-price">$<%= item.price / 100 %></span>
+                            <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                        </div>
                     </div>
-                </div>
+                <% }) %>
             </div>
         </section>
 
