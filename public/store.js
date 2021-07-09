@@ -28,20 +28,34 @@ function ready() {
     document.getElementsByClassName("btn-purchase")[0].addEventListener("click", purchaseClicked);
 }
 
-/*BUG: for no items in cart */
+var stripeHandler = StripeCheckout.configure({
+    key: stripePublicKey,
+    locale: "auto",
+    token: function(token) {
+        console.log(token)
+        
+    }
+})
+
+// BUG: for no items in cart
 function purchaseClicked() {
-    var cartItems = document.getElementsByClassName("cart-items")[0];
-    console.log(cartItems.hasChildNodes.length)
-    if (cartItems.hasChildNodes == 0) { /* BUG: Why does it always say "Thank you" first even though length is 0 on console? */
-        alert("No items in cart")
-    }
-    else {
-        alert("Thank you for your purchase")
-        while (cartItems.hasChildNodes()) {
-            cartItems.removeChild(cartItems.firstChild);
-        }
-        updateCartTotal();
-    }
+    // var cartItems = document.getElementsByClassName("cart-items")[0];
+    // console.log(cartItems.hasChildNodes.length)
+    // if (cartItems.hasChildNodes == 0) { /* BUG: Why does it always say "Thank you" first even though length is 0 on console? */
+    //     alert("No items in cart")
+    // }
+    // else {
+    //     alert("Thank you for your purchase")
+    //     while (cartItems.hasChildNodes()) {
+    //         cartItems.removeChild(cartItems.firstChild);
+    //     }
+    //     updateCartTotal();
+    // }
+    var priceElement = document.getElementsByClassName("cart-total-price")[0];
+    var price = parseFloat(priceElement.innerText.replace("$", "")) * 100;
+    stripeHandler.open({
+        amount: price
+    })
 }
 
 function removeCartItem(event) {
@@ -108,7 +122,7 @@ function updateCartTotal() {
         var cartRow = cartRows[i];
         var priceElement = cartRow.getElementsByClassName("cart-price")[0];
         var quantityElement = cartRow.getElementsByClassName("cart-quantity-input")[0];
-        var price = parseFloat(priceElement.innerText.replace("$",""));
+        var price = parseFloat(priceElement.innerText.replace("$", ""));
         var quantity = quantityElement.value;
         total = total + (price * quantity);
     }
