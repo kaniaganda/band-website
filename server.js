@@ -21,11 +21,14 @@ app.get('/store', function(req, res) {
             res.status(500).end();
         }
         else {
-            res.render('store.ejs', {items: JSON.parse(data)}); /* how does compiler know which JSON to parse? is it because items: is stated? */
+            res.render('store.ejs', {
+                stripePublicKey: stripePublicKey,
+                items: JSON.parse(data)
+            }); /* how does compiler know which JSON to parse? is it because items: is stated? */
         }
     })
 })
 
 app.listen(3000);
 
-/* add library for store 15:44 */
+/* integrate stripe 28:18 */
