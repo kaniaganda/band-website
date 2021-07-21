@@ -45,6 +45,7 @@ var stripeHandler = StripeCheckout.configure({
                 quantity: quantity
             })
         }
+<<<<<<< HEAD
 
         fetch("/purchase", {
             method: "POST",
@@ -57,6 +58,8 @@ var stripeHandler = StripeCheckout.configure({
                 items: items
             })
         })
+=======
+>>>>>>> ed55e637cd3f433bf524e92400cccddd3b5ec536
     }
 })
 
