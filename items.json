@@ -3,13 +3,13 @@
         {
             "id": 1,
             "name": "One Last Memory",
-            "price": 100,
+            "price": 199,
             "imgName": "ANONJ_Album.png"
         },
         {
             "id": 2,
             "name": "Something to Live For",
-            "price": 100,
+            "price": 199,
             "imgName": "ANONJ_Album.png"
         }
     ],
@@ -17,7 +17,7 @@
         {
             "id": 3,
             "name": "Sticker",
-            "price": 50,
+            "price": 99,
             "imgName": "ANONJ_Logo.jpg"
         }
     ]
